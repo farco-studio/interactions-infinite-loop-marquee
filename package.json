@@ -1,0 +1,25 @@
+{
+    "name": "InfiniteLoopMarquee",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "start": "parcel src/index.html --open",
+      "clean": "rm -rf dist/*",
+      "build:parcel": "parcel build src/index.html --no-content-hash --no-source-maps --public-url ./",
+      "build": "npm run clean && npm run build:parcel"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:farco-studio/interactions-infinite-loop-marquee.git"
+    },
+    "keywords": [],
+    "author": "Marina Gallardo",
+    "license": "MIT",
+    "homepage": "https://www.farcostudio.com",
+    "devDependencies": {
+      "parcel": "latest"
+    },
+    "dependencies": {
+      "gsap": "^3.11.4"
+    }
+  }

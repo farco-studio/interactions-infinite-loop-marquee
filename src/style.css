@@ -1,0 +1,54 @@
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.marquee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.marquee-block {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  will-change: transform;
+  animation: reveal 1s ease-in-out;
+}
+
+.marquee {
+  overflow: hidden;
+}
+
+p {
+  margin: 18px;
+}
+
+.marquee-item {
+  font-size: 88px;
+  padding-right: 32px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.marquee-item:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .marquee-item {
+    font-size: 44px;
+  }
+}
