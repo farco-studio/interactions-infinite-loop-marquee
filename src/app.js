@@ -80,7 +80,7 @@ const startMarquee = () => {
     getClonesWidth(clone);
   });
 
-  console.log(clonesWidth)
+  console.log(clonesWidth);
 
   // getClonesWidth();
   hoverMarquee();

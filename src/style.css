@@ -16,7 +16,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .marquee {
@@ -59,7 +59,7 @@ p {
 
 .marquee-item:hover .image {
   opacity: 1;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);  
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 @media screen and (max-width: 768px) {
