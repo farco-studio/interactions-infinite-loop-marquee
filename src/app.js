@@ -71,7 +71,6 @@ const createAnimation = () => {
 };
 
 const startMarquee = () => {
-  // cloneItems();
   items.forEach((item) => {
     cloneItems(item);
   });
@@ -80,9 +79,6 @@ const startMarquee = () => {
     getClonesWidth(clone);
   });
 
-  console.log(clonesWidth);
-
-  // getClonesWidth();
   hoverMarquee();
   getMousePosition();
   createAnimation();
