@@ -1,3 +1,8 @@
+:root {
+  --gray: #eee;
+  --black: #222;
+}
+
 @keyframes reveal {
   0% {
     opacity: 0;
@@ -11,6 +16,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .marquee {
@@ -26,6 +32,7 @@ body {
   width: 100%;
   will-change: transform;
   animation: reveal 1s ease-in-out;
+  position: relative;
 }
 
 .marquee {
@@ -38,17 +45,37 @@ p {
 
 .marquee-item {
   font-size: 88px;
-  padding-right: 32px;
+  padding: 0 32px;
+  color: var(--gray);
   transition: opacity 0.2s ease-in-out;
+  position: relative;
+  white-space: nowrap;
 }
 
 .marquee-item:hover {
-  opacity: 0.5;
+  color: var(--black);
   cursor: pointer;
+}
+
+.marquee-item:hover .image {
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);  
 }
 
 @media screen and (max-width: 768px) {
   .marquee-item {
     font-size: 44px;
   }
+}
+
+.image {
+  width: 320px;
+  height: 320px;
+  z-index: -1;
+  background-size: cover;
+  position: absolute;
+  left: calc(50% - 130px);
+  top: calc(50% - 130px);
+  opacity: 0;
+  pointer-events: none;
 }
