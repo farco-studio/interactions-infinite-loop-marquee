@@ -1,7 +1,15 @@
 :root {
   --gray: #eee;
-  --black: #222;
+  --color-primary: #222;
+  --header-font-size: 16px;
 }
+
+@media screen and (max-width: 767px) {
+  :root {
+    --header-font-size: 14px;
+  }
+}
+
 
 @keyframes reveal {
   0% {
@@ -17,6 +25,47 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+}
+
+.header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  position: relative;
+  font-family: var(--font-base);
+  font-size: var(--header-font-size);
+}
+
+.header a::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  right: 100%;
+  background: var(--color-primary);
+  position: absolute;
+  transition: right 0.3s ease-in-out;
+}
+
+.header a:hover::after {
+  right: 24px;
+}
+
+.header svg path {
+  stroke: var(--color-primary);
 }
 
 .marquee {
@@ -53,7 +102,7 @@ p {
 }
 
 .marquee-item:hover {
-  color: var(--black);
+  color: var(--color-primary);
   cursor: pointer;
 }
 
